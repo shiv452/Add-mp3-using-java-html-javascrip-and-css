@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>my music</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="content">
+        <div class="left-col">
+
+            <h1>My Music</h1>
+        </div>
+        <div class="right-col">
+            <p>Click Here to Listen</p>
+            <img src="play.png" id="icon" width="100" height="100">
+        </div>
+    </div>
+    <audio id="mySong">
+        <source src="mySong.mp3" type="audio/mp3">
+    </audio>
+    <script>
+        var mySong = document.getElementById("mySong");
+        var icon = document.getElementById("icon");
+        icon.onclick = function() {
+            if (mySong.paused) {
+                mySong.play();
+                icon.src = "pause.png";
+            } else {
+                mySong.pause();
+                icon.src = "play.png";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
